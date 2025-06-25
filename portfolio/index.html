@@ -1,33 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Fira+Code&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simmer Mwaniki | Developer</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header class="header">
-    <button id="toggle-theme" aria-label="Toggle theme">🌓</button>
-  </header>
+  <!-- Dark/Light Mode Toggle -->
+  <button id="theme-toggle" class="theme-toggle">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+  </button>
 
-  <main class="hero">
-    <h1>Hi, I'm Simmer.<br>I try making <span class="highlight">{cool things}</span> with code.</h1>
-    <a href="#projects" class="cta-button">See My Work</a>
-  </main>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="logo">Simmer</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger">☰</button>
+    </div>
+  </nav>
 
-  <footer class="footer">
-    <p>© 2025 Simmer Mwaniki</p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">Simmer Mwaniki</span></h1>
+      <p>A developer who loves the intersection of design and code.</p>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="about">
+    <div class="about-container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>
+          I'm a <strong>passionate developer</strong> who enjoys trying new coding experiences. 
+          I love working with modern web technologies and exploring the intersection of 
+          <strong>design and code</strong>. Currently diving into mobile and game development, 
+          and always excited to learn something new!
+        </p>
+        <div class="skills">
+          <h3>Skills & Interests</h3>
+          <ul>
+            <li>Web Development </li>
+            <li>Mobile Dev (Flutter, Kotlin)</li>
+            <li>Game Dev (Unity)</li>
+            <li>UI/UX Design</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Simmer. Many crashouts later</p>
   </footer>
 
-  <script>
-    const toggleBtn = document.getElementById('toggle-theme');
-    toggleBtn.addEventListener('click', () => {
-      const html = document.documentElement;
-      const currentTheme = html.getAttribute('data-theme');
-      html.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
